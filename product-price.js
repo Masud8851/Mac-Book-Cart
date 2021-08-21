@@ -1,5 +1,3 @@
-// Main Funtion
-document.getElementById('eightGBmemory').addEventListener('click', function()
-{
-    
-})    
+document.getElementById('eightGBmemory').addEventListener('click',function(){
+    console.log('Masud')
+})
