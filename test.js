@@ -11,17 +11,17 @@ const ssd1tb = document.getElementById('ssd-1tb');
 const freeDelivery = document.getElementById('free-delivery');
 const expressDelivery = document.getElementById('express-delivery');
 
-// Extra Memory Cost
-const extraMemoryField = document.getElementById('memory-cost');
-
-// Extra Storaage Cost
-const extraStorageField = document.getElementById('storage-cost');
-
-// Delivery Cost
-const extraShippingField = document.getElementById('shipping-cost');
-
 // Best Price Field
 const bestPriceText = document.getElementById('best-price');
+
+// Extra Memory Cost
+const extraMemoryCost = document.getElementById('memory-cost');
+
+// Extra Storaage Cost
+const extraStorageCost = document.getElementById('storage-cost');
+
+// Delivery Cost
+const extraShippingCost = document.getElementById('delivery-charge');
 
 // Price
 const price = document.getElementById('price');
@@ -53,10 +53,10 @@ apply.addEventListener('click', function() {
 // Update Total Function
 function updateTotal() {
     const bestPrice = Number(bestPriceText.innerText);
-    const extraMemoryCost = Number(extraMemoryField.innerText);
-    const extraStorageCost = Number(extraStorageField.innerText);
-    const extraShippingCost = Number(extraShippingField.innerText);
-    const total = bestPrice + extraMemoryCost + extraStorageCost + extraShippingCost;
+    const memoryCost = Number(extraMemoryCost.innerText);
+    const storageCost = Number(extraStorageCost.innerText);
+    const deliveryCost = Number(extraShippingCost.innerText);
+    const total = bestPrice + memoryCost + storageCost + deliveryCost;
     price.innerText = total;
     grandTotal.innerText = total;
 }
@@ -69,7 +69,7 @@ memory8gb.addEventListener('click', function() {
         memory16gb.classList.remove('active');
     }
     // Add Extra Memory Cost
-    extraMemoryField.innerText = '0';
+    extraMemoryCost.innerText = '0';
     // Update Price
     updateTotal()
 })
@@ -82,7 +82,7 @@ memory16gb.addEventListener('click', function() {
         memory16gb.classList.add('active');
     }
     // Add Extra Memory Cost
-    extraMemoryField.innerText = '180';
+    extraMemoryCost.innerText = '180';
     // Update Price
     updateTotal()
 })
@@ -96,7 +96,7 @@ ssd256gb.addEventListener('click', function() {
         ssd1tb.classList.remove('active');
     }
     // Add Extra Storage Cost
-    extraStorageField.innerText = '0';
+    extraStorageCost.innerText = '0';
     // Update Price
     updateTotal()
 })
@@ -110,7 +110,7 @@ ssd512gb.addEventListener('click', function() {
         ssd1tb.classList.remove('active');
     }
     // Add Extra Storage Cost
-    extraStorageField.innerText = '100';
+    extraStorageCost.innerText = '100';
     // Update Price
     updateTotal()
 })
@@ -124,7 +124,7 @@ ssd1tb.addEventListener('click', function() {
         ssd1tb.classList.add('active');
     }
     // Add Extra Storage Cost
-    extraStorageField.innerText = '180';
+    extraStorageCost.innerText = '180';
     // Update Price
     updateTotal()
 })
@@ -138,7 +138,7 @@ freeDelivery.addEventListener('click', function() {
         expressDelivery.classList.remove('active');
     }
     // Add Extra SHipping Cost
-    extraShippingField.innerText = '0';
+    extraShippingCost.innerText = '0';
     // Update Price
     updateTotal()
 })
@@ -151,7 +151,7 @@ expressDelivery.addEventListener('click', function() {
         expressDelivery.classList.add('active');
     }
     // Add Extra SHipping Cost
-    extraShippingField.innerText = '20';
+    extraShippingCost.innerText = '20';
     // Update Price
     updateTotal()
 })
