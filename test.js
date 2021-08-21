@@ -45,7 +45,7 @@ apply.addEventListener('click', function() {
     if (promoCode.value == 'stevekaku') {
         grandTotal.innerText = price.innerText * 0.8;
     } else {
-        document.getElementById('promo-text').innerText = 'Sorry! Promo Not Valid!';
+        document.getElementById('invalid-promo-text').innerText = 'Invalid promocode!';
     }
 })
 
