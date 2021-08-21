@@ -11,13 +11,13 @@ const ssd1tb = document.getElementById('ssd-1tb');
 const freeDelivery = document.getElementById('free-delivery');
 const expressDelivery = document.getElementById('express-delivery');
 
-// Extra Memory Field
+// Extra Memory Cost
 const extraMemoryField = document.getElementById('memory-cost');
 
-// Extra Storaage Field
+// Extra Storaage Cost
 const extraStorageField = document.getElementById('storage-cost');
 
-// Extra Shipping Field
+// Delivery Cost
 const extraShippingField = document.getElementById('shipping-cost');
 
 // Best Price Field
