@@ -1,6 +1,6 @@
-// Extra Memory Button
-const ram8GB = document.getElementById('8gb-ram');
-const ram16GB = document.getElementById('16gb-ram');
+// Memory Button
+const memory8gb = document.getElementById('8gb');
+const memory16gb = document.getElementById('16gb');
 
 // Extra Storage Button
 const rom256GB = document.getElementById('256gb-rom');
@@ -62,11 +62,11 @@ function updateTotal() {
 }
 
 // 8GB Unified Memory
-ram8GB.addEventListener('click', function() {
+memory8gb.addEventListener('click', function() {
     // Active or Non Active Check
-    if (!isContain(ram8GB)) {
-        ram8GB.classList.add('active');
-        ram16GB.classList.remove('active');
+    if (!isContain(memory8gb)) {
+        memory8gb.classList.add('active');
+        memory16gb.classList.remove('active');
     }
     // Add Extra Memory Cost
     extraMemoryField.innerText = '0';
@@ -75,11 +75,11 @@ ram8GB.addEventListener('click', function() {
 })
 
 // 16GB Unified Memory
-ram16GB.addEventListener('click', function() {
+memory16gb.addEventListener('click', function() {
     // Active or Non Active Check
-    if (!isContain(ram16GB)) {
-        ram8GB.classList.remove('active');
-        ram16GB.classList.add('active');
+    if (!isContain(memory16gb)) {
+        memory8gb.classList.remove('active');
+        memory16gb.classList.add('active');
     }
     // Add Extra Memory Cost
     extraMemoryField.innerText = '180';
