@@ -3,9 +3,9 @@ const memory8gb = document.getElementById('8gb');
 const memory16gb = document.getElementById('16gb');
 
 // Storage Buttons
-const rom256GB = document.getElementById('ssd-256gb');
-const rom512GB = document.getElementById('ssd-512gb');
-const rom1TB = document.getElementById('ssd-1tb');
+const ssd256gb = document.getElementById('ssd-256gb');
+const ssd512gb = document.getElementById('ssd-512gb');
+const ssd1tb = document.getElementById('ssd-1tb');
 
 // Extra Shipping Button
 const freeDelivery = document.getElementById('free-shipping');
@@ -88,12 +88,12 @@ memory16gb.addEventListener('click', function() {
 })
 
 // 256GB SSD Storage
-rom256GB.addEventListener('click', function() {
+ssd256gb.addEventListener('click', function() {
     // Active or Non Active Check
-    if (!isContain(rom256GB)) {
-        rom256GB.classList.add('active');
-        rom512GB.classList.remove('active');
-        rom1TB.classList.remove('active');
+    if (!isContain(ssd256gb)) {
+        ssd256gb.classList.add('active');
+        ssd512gb.classList.remove('active');
+        ssd1tb.classList.remove('active');
     }
     // Add Extra Storage Cost
     extraStorageField.innerText = '0';
@@ -102,12 +102,12 @@ rom256GB.addEventListener('click', function() {
 })
 
 // 512GB SSD Storage
-rom512GB.addEventListener('click', function() {
+ssd512gb.addEventListener('click', function() {
     // Active or Non Active Check
-    if (!isContain(rom512GB)) {
-        rom256GB.classList.remove('active');
-        rom512GB.classList.add('active');
-        rom1TB.classList.remove('active');
+    if (!isContain(ssd512gb)) {
+        ssd256gb.classList.remove('active');
+        ssd512gb.classList.add('active');
+        ssd1tb.classList.remove('active');
     }
     // Add Extra Storage Cost
     extraStorageField.innerText = '100';
@@ -116,12 +116,12 @@ rom512GB.addEventListener('click', function() {
 })
 
 // 1TB SSD Storage
-rom1TB.addEventListener('click', function() {
+ssd1tb.addEventListener('click', function() {
     // Active or Non Active Check
-    if (!isContain(rom1TB)) {
-        rom256GB.classList.remove('active');
-        rom512GB.classList.remove('active');
-        rom1TB.classList.add('active');
+    if (!isContain(ssd1tb)) {
+        ssd256gb.classList.remove('active');
+        ssd512gb.classList.remove('active');
+        ssd1tb.classList.add('active');
     }
     // Add Extra Storage Cost
     extraStorageField.innerText = '180';
