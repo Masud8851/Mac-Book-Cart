@@ -1,11 +1,11 @@
-// Memory Button
+// Memory Buttons
 const memory8gb = document.getElementById('8gb');
 const memory16gb = document.getElementById('16gb');
 
-// Extra Storage Button
-const rom256GB = document.getElementById('256gb-rom');
-const rom512GB = document.getElementById('512gb-rom');
-const rom1TB = document.getElementById('1tb-rom');
+// Storage Buttons
+const rom256GB = document.getElementById('ssd-256gb');
+const rom512GB = document.getElementById('ssd-512gb');
+const rom1TB = document.getElementById('ssd-1tb');
 
 // Extra Shipping Button
 const freeDelivery = document.getElementById('free-shipping');
