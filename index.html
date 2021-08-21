@@ -8,7 +8,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body class="p-5">
+<body class="p-1">
     <!-- Main -->
     <div class="container">
         <!-- Product Details -->
@@ -23,36 +23,38 @@
                 <h2>Customize your Blue 24-inch <br>iMac with Apple M1 chip.</h2>
                 <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency <br>d cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB <br> SSD storage Two Thuderbolt/USB 4 ports Magic Mouse Magic Keyboard - <br> US English.</p>
 
-                <!-- Memory -->
+                <!-- Memory Buttons -->
                 <h6>Memory</h6>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary" id="eightGBmemory">8GB unified memory</button>                    
+                    <button type="button" class="btn btn-primary" id="8gb-ram">8GB unified memory</button>                    
                 </div>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-secondary" id="sixteenGBmemory">16GB unified memory</button>                   
+                    <button type="button" class="btn btn-secondary" id="16gb-ram">16GB unified memory</button>                   
                 </div>
                 <br>
                 <br>
 
-                <!-- Storage -->
+                <!-- Storage Buttons -->
                 <h6>Storage</h6>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary">256GB SSD storage</button>                    
+                    <button type="button" class="btn btn-primary" id="256gb-rom">256GB SSD storage</button>                    
                 </div>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-secondary">512GB SSD storage</button>                   
+                    <button type="button" class="btn btn-secondary" id="512gb-rom">512GB SSD storage</button>                   
                 </div>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-success">1TB SSD storage</button>                   
+                    <button type="button" class="btn btn-success" id="1tb-rom">1TB SSD storage</button>                   
                 </div>
                 <br>
-                <br>   
+                <br>
+                
+                <!-- Delivery Options -->
                 <h6>Choose your delivery option</h6>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary p-2">Friday, Aug 25 FREE Prime Delivery</button>                    
+                    <button type="button" class="btn btn-primary p-2" id="free-shipping">Friday, Aug 25 FREE Prime Delivery</button>                    
                 </div>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-secondary p-2">Friday, Aug 21 Delivery charge $20</button>                   
+                    <button type="button" class="btn btn-secondary p-2" id="express-shipping">Friday, Aug 21 Delivery charge $20</button>                   
                 </div> 
                 <br>
                 <br>
@@ -62,45 +64,49 @@
                     <tbody>
                         <tr>
                           <td>Best Price</td> 
-                          <td>$<span id="bestPrice">1299</span></td>
+                          <td>$<span id="best-price">1299</span></td>
                         </tr>
                         <tr>
                           <td>Extra Memory Cost</td>
-                          <td>$ <span>0</span></td>
+                          <td>$ <span id="memory-cost">0</span></td>
                         </tr>
                         <tr>
                           <td>Extra Storage Cost</td>
-                          <td>$ <span>0</span></td>
+                          <td>$ <span id="storage-cost">0</span></td>
                         </tr>
                         <tr>
                           <td>Delivery Charge</td>
-                          <td>$ <span>0</span></td>
+                          <td>$ <span id="shipping-cost">0</span></td>
                         </tr>
-                        <tr>
-                          <td class="text-warning">Total Price</td>
-                          <td class="text-warning">$ <span>0</span></td>
+                        <tr>             
+                          <td class="text-warning">Total Price</td> 
+                          <td class="text-warning">$ <span id="price">1299</span></td>
                         </tr>                      
                     </tbody>                   
                 </table>
 
                 <!-- Add Promo Input -->
                 <div class="input-group">
-                    <input type="text" aria-label="promo-code" width="20px">
-                    <button type="button" class="btn btn-danger">Apply</button>
-                </div>                
+                    <input id="Promo" type="text" aria-label="promo-code" width="20px">
+                    <button id="apply" type="button" class="btn btn-danger">Apply</button>
+                    
+                </div> 
+                <br>
+                <p id="invalid-promo-text" class="text-danger"></p>               
             </div>         
         </div>
     </div>
-    <!-- Total -->
+    <!-- Grand Total -->
     <div class="container">
         <hr>
-        <h1 class="text-center">Total: $<span>1299</span></h1>
+        <h1 class="text-center" >Total: $<span id="grand-total">1299</span></h1>
         <br>
 
     </div>
 
     <!-- Script -->
-    <script src="product-price.js"></script>
+    <script src="main1.js"></script>
+
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
