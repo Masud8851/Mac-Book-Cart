@@ -7,9 +7,9 @@ const ssd256gb = document.getElementById('ssd-256gb');
 const ssd512gb = document.getElementById('ssd-512gb');
 const ssd1tb = document.getElementById('ssd-1tb');
 
-// Extra Shipping Button
-const freeDelivery = document.getElementById('free-shipping');
-const expressDelivery = document.getElementById('express-shipping');
+// Delivery Option's Buttons
+const freeDelivery = document.getElementById('free-delivery');
+const expressDelivery = document.getElementById('express-delivery');
 
 // Extra Memory Field
 const extraMemoryField = document.getElementById('memory-cost');
